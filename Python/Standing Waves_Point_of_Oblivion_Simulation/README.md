@@ -95,6 +95,7 @@ This script simulates a standing wave model and analyzes its Lagrangian as a fun
    - Plots the Lagrangian as a function of time using `plt.plot()`.
 
 
+![Lagrangian_of_standing_wave_model](Lagrangian_of_standing_wave_model.png)
 
 In Lagrangian mechanics, the Lagrangian 𝐿 is typically defined as the difference between the kinetic energy (𝑇) and the potential energy (𝑉) of the system.
 
