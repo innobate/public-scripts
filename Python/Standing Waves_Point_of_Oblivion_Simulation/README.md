@@ -56,7 +56,7 @@ Output Probabilities: Finally, the script outputs the probabilities of the ampli
 
 This script provides a comprehensive analysis of a standing wave model, including its amplitude and energy characteristics over time, as well as the probabilities associated with different states of the amplitude.
 
-![standing_wave_simulation_point_of_oblivion_probability](Screenshot 2024-05-15 011100.png)
+![standing_wave_simulation_point_of_oblivion_probability](Screenshot%202024-05-15%20011100.png)
 
 ## lagrangian_standing_wave_model
 This script simulates a standing wave model and analyzes its Lagrangian as a function of time. Here's a breakdown of each key element:
