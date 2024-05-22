@@ -1,4 +1,4 @@
-## Standing Wave Simulation (README.md)
+## Standing Wave Simulation - Point of Oblivion Energy Factal Simulation
 
 This document describes a Python script simulating a standing wave in a one-dimensional medium and analyzing its behavior over time. The script focuses on the concept of energy localization and the "point of oblivion," where the wave amplitude becomes negligible.
 
