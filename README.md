@@ -75,3 +75,85 @@ for n, E in enumerate(energies):
 - **Calculating Wave Functions and Energies**: We use the analytical solutions for the infinite potential well to calculate the wave functions and energy levels.
 - **Visualization**: We plot the wave functions shifted by their corresponding energy levels for clarity. The energy levels are displayed as horizontal lines in the plot.
 This example illustrates the concept of energy quantization in a quantum system. The Schrödinger equation can be solved for various potentials to understand the energy distribution and wave functions of different quantum systems.
+
+
+## Calculate energy of wave from its intensity
+To calculate the energy of a standing wave using the rate of change of intensity (\( \frac{dI}{dt} \)), we need to understand the relationship between intensity and the physical quantities involved in the standing wave.
+
+### Intensity and Energy Relationship
+
+For a wave, intensity \( I \) is related to the energy per unit area per unit time. The energy density (energy per unit volume) of the wave can be expressed in terms of the square of the displacement velocity \( \left( \frac{\partial u}{\partial t} \right) \).
+
+The formula for intensity \( I \) is:
+\[ I = \frac{1}{2} \rho \left( \frac{\partial u}{\partial t} \right)^2 v \]
+where:
+- \( \rho \) is the density of the medium,
+- \( v \) is the speed of the wave,
+- \( \frac{\partial u}{\partial t} \) is the displacement velocity.
+
+For a standing wave, the energy is contained within the oscillations of the wave and does not propagate. However, we can relate the intensity to the energy density as follows:
+\[ I = \frac{dE}{dA \cdot dt} \]
+
+### Energy Calculation using Rate of Change of Intensity
+
+Given the intensity \( I \), the energy \( E \) over a length \( L \) can be calculated by integrating the intensity over the time and spatial dimensions.
+
+1. **Expression for Energy Density**:
+   \[
+   E_{\text{density}} = \frac{1}{2} \rho \left( \frac{\partial u}{\partial t} \right)^2
+   \]
+
+2. **Rate of Change of Intensity**:
+   The rate of change of intensity \( \frac{dI}{dt} \) can be expressed as:
+   \[
+   \frac{dI}{dt} = \frac{d}{dt} \left( \frac{1}{2} \rho \left( \frac{\partial u}{\partial t} \right)^2 v \right)
+   \]
+   Since the speed \( v \) is constant for a given medium and wave type, we get:
+   \[
+   \frac{dI}{dt} = \frac{1}{2} \rho v \cdot \frac{d}{dt} \left( \left( \frac{\partial u}{\partial t} \right)^2 \right)
+   \]
+
+3. **Calculating the Energy \( E \)**:
+   To find the total energy, integrate the energy density over the length \( L \) of the medium:
+   \[
+   E = \int_0^L \frac{1}{2} \rho \left( \frac{\partial u}{\partial t} \right)^2 dx
+   \]
+
+4. **Connecting to Intensity**:
+   Since intensity \( I \) relates to the energy flow per unit area, the total energy in the standing wave can also be interpreted through the integrated intensity:
+   \[
+   E = \int_0^T \int_0^L I \, dx \, dt
+   \]
+
+5. **Using the Rate of Change of Intensity**:
+   If we know the rate of change of intensity \( \frac{dI}{dt} \), we can integrate this over time to find the change in intensity, and thus the energy:
+   \[
+   I(t) = \int \frac{dI}{dt} \, dt
+   \]
+   And the energy over the length \( L \):
+   \[
+   E = \int_0^L I(t) \, dx
+   \]
+
+### Detailed Steps and Equations
+
+1. **Calculate the Rate of Change of Intensity**:
+   \[
+   \frac{dI}{dt} = \frac{1}{2} \rho v \cdot 2 \left( \frac{\partial u}{\partial t} \right) \left( \frac{\partial^2 u}{\partial t^2} \right)
+   \]
+   Simplify to:
+   \[
+   \frac{dI}{dt} = \rho v \left( \frac{\partial u}{\partial t} \right) \left( \frac{\partial^2 u}{\partial t^2} \right)
+   \]
+
+2. **Integrate to Find Intensity**:
+   \[
+   I(t) = \int \rho v \left( \frac{\partial u}{\partial t} \right) \left( \frac{\partial^2 u}{\partial t^2} \right) \, dt
+   \]
+
+3. **Calculate the Energy**:
+   \[
+   E = \int_0^L I(t) \, dx = \int_0^L \int_0^T \rho v \left( \frac{\partial u}{\partial t} \right) \left( \frac{\partial^2 u}{\partial t^2} \right) \, dt \, dx
+   \]
+
+This approach integrates the rate of change of intensity over time to get the intensity and then integrates this intensity over the spatial domain to obtain the total energy of the standing wave. This provides a detailed method to link the rate of change of intensity to the energy in the standing wave.
